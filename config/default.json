@@ -1,0 +1,5 @@
+{
+    "secretOrPrivateKey": "secret key",
+    "saltRounds": 10,
+    "salt": "lnbfenkjd"
+}
