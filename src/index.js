@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-// const config = require('config');
 const passport = require("passport");
-const usersRoute =require('./routes/user');
+const usersRoute =require('./Routes/user');
+const eventRoute =require('./Routes/event');
 
 dotenv.config({
   override: true,
@@ -27,6 +27,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/auth',usersRoute);
+app.use('/event',eventRoute);
 
 const {
   authenticate,
