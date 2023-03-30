@@ -7,12 +7,16 @@ const eventSchema = new Schema({
     type: String,
     required: true
   },
+  category: {
+    type: String,
+    required: true
+  },
   startDate: {
-    type: Date,
+    type: String,
     required: true
   },
   endDate: {
-    type: Date,
+    type: String,
     required: true
   },
   location: {
@@ -26,6 +30,10 @@ const eventSchema = new Schema({
   city:{
     type:String,
     required:true
+  },
+  description: {
+    type: String,
+    required: true
   },
   userEmail:{
     type:String,

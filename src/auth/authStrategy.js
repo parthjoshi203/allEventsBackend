@@ -1,8 +1,6 @@
 const LocalStrategy=require('passport-local').Strategy;
-const passportGoogle=require('passport-google-oauth');
 const User=require('../Model/userModel');
 
-// const GoogleStrategy=passportGoogle.OAuth2Strategy;
 
 const authenticate=()=>
     new LocalStrategy(
@@ -24,20 +22,6 @@ const authenticate=()=>
         },
 );
 
-// const googleAuthenticate=()=>new GoogleStrategy(
-//     {
-//         clientID: process.env.GOOGLE_CLIENT_ID,
-//         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-//         callbackURL: '/api/auth/google/callback',
-//         scope: [ 'email','profile' ],
-//         state: true,
-//     },
-//     (accessToken, refreshToken, profile,cb)=>{
-//         cb(null,profile)
-//     }
-// )
-
 module.exports={
-    authenticate,
-    // googleAuthenticate
+    authenticate
 }

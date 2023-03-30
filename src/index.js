@@ -31,11 +31,9 @@ app.use('/event',eventRoute);
 
 const {
   authenticate,
-  // googleAuthenticate,
 }=require('./auth/authStrategy');
 
 passport.use(authenticate());
-// passport.use(googleAuthenticate());
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
